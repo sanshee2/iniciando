@@ -14,8 +14,8 @@ def functionIMC(x,y):
     return x**2 / y
 
 def calculoArea(base, altura, tipo):
-    tipo = tipo.isnumeric()
-    if altura.isdigit():
+    tipo = tipo.lower()
+    if type(altura) == "int" or type(altura) == "float":
         if tipo == "triangulo":
             return base * altura /2
         elif tipo == "quadrado" or tipo == "retangulo":
