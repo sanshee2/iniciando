@@ -14,15 +14,17 @@ def functionIMC(x,y):
     return x**2 / y
 
 def calculoArea(base, altura, tipo):
-    tipo = tipo.isnumeric()
-    print(type(altura))
-    if type(altura) == "int" or type(altura) == "float":
+    tipo = tipo.lower()
+    try:
         if tipo == "triangulo":
             return base * altura /2
         elif tipo == "quadrado" or tipo == "retangulo":
             return base * altura
         else:
             return "Não consigo entender o tipo"
+
+    except Exception as e:
+        print(e)
 
 def lista(x):
     '''Printa todos os elementos de uma lista
