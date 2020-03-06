@@ -23,6 +23,13 @@ def calculoArea(base, altura, tipo):
         else:
             return "Não consigo entender o tipo"
 
+def lista(x):
+    '''Printa todos os elementos de uma lista
+    separadamente'''
+    for val in x:
+        print(val)
+
+
 if __name__ == "__main__":
 
     x = calculoArea(1, 1, "triangulo")
